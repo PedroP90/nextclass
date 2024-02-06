@@ -18,7 +18,6 @@ export default function AdminLayout({children}: IChildren){
         <>
             <header>
                 <h1>Header del Backend</h1>
-                {/* <Menu/> */}
                 <Menu links= {links} />
             </header>
             <main>
