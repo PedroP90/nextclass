@@ -1,18 +1,17 @@
 "use client"
 
-import React from 'react'
+import React, { FC } from 'react'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import Link from 'next/link';
+import { ILink } from '@/interfaces/iLinks';
 
-const links = [
-  {name: 'Productos', href: '/public/productos'},
-  {name: 'Categorias', href: '/public/categorias'},
-  {name: 'Proveedores', href: '/public/proveedores'},
-  {name: 'Quienes Somos', href: '/public/about'}
-];
+interface Props {
+  links: ILink[],
+  // segundo: ISegundo[]
+}
 
-
-export const MenuLink = () => {
+//Componentes parametrizado (recibe parámetros)
+export const Menu:FC<Props> = ({links}) => {
 
     return (
         <Navbar>
