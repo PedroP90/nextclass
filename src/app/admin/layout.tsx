@@ -7,10 +7,10 @@ import { ILink } from "@/interfaces/iLinks";
 export default function AdminLayout({children}: IChildren){
 
     const links:ILink[] = [
-        {name: 'Insertar', href: '/admin/productos'},
-        {name: 'Borrar', href: '/admin/categorias'},
-        {name: 'Actualizar', href: '/admin/proveedores'},
-        {name: 'Listar', href: '/admin/about'}
+        {name: 'Insertar', href: '/admin/insertar'},
+        {name: 'Borrar', href: '/admin/borrar'},
+        {name: 'Actualizar', href: '/admin/actualizar'},
+        {name: 'Listar', href: '/admin/listar'}
       ];
 
 
