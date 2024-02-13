@@ -1,3 +1,4 @@
+'use client'
 import Tabla from '@/components/commons/tabla/tabla'
 import Tabla1 from '@/components/commons/tabla/tabla1'
 import ColumProveedor, { IProveedor } from '@/interfaces/iProveedores'
@@ -11,7 +12,7 @@ const ProveedoresPage = async () => {
   return (
     <>
       <h1>Proveedores</h1>
-      <ul>
+      {/* <ul>
         {
           proveedores.map ((producto: IProveedor) => (
             <li key={producto.cif}>
@@ -19,8 +20,8 @@ const ProveedoresPage = async () => {
             </li>
           ))
         }
-      </ul>
-      {/* <Tabla rows={proveedores} columns={ColumProveedor}/> */}
+      </ul> */}
+      <Tabla rows={proveedores} columns={ColumProveedor}/>
     </>
   )
 }
