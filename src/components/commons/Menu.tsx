@@ -14,7 +14,7 @@ interface Props {
 export const Menu:FC<Props> = ({links}) => {
 
     return (
-        <Navbar>
+        <Navbar style={{backgroundColor: 'gray'}}>
       {/* En una función de flecha se usan llaves y return si hay instrucciones java en medio
       que se traduce por paréntesis */}
       <NavbarBrand>
