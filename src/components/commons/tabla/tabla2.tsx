@@ -8,7 +8,7 @@ const rows = [
     role: "CEO",
     status: "Active",
   },
-  {
+  { 
     key: "2",
     name: "Zoey Lang",
     role: "Technical Lead",
@@ -60,3 +60,6 @@ const Tabla2=()=> {
   );
 }
 export default Tabla2
+
+// "flex flex-row flex-wrap"
+// "basis 1/4 p-2"

@@ -6,6 +6,7 @@ export interface IProveedor {
     pais:          string;
     codigo_postal: string;
     direccion:     string;
+    key?:          string;
 }
 
 export interface IColumn {
