@@ -1,14 +1,21 @@
-'use client'
-import Tabla1 from "@/components/commons/tabla/tabla1";
-import Tabla2 from "@/components/commons/tabla/tabla2";
+import { ICategoria } from "@/interfaces/ICategorias";
+import { getCategorias } from "@/model/categorias/datacategoria";
 
-export default function CategoriasPage(){
-    return (
-      <>
-        <h1>Categorias</h1>
-        <Tabla1/>
-        <Tabla2/>
-      </>
-      
-    )
-  }
+const CategoriasPage = async () => {
+
+  const categorias: ICategoria[] = await getCategorias()
+  return (
+    <>
+      <h1>Proveedores</h1>
+      {/* <Tabla 
+        rows={proveedores} 
+        columns={ColumProveedor}
+        key='cif'/> */}
+        
+    </>
+  )
+}
+
+
+
+export default CategoriasPage;

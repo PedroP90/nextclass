@@ -1,35 +1,23 @@
+import { ProductosCardList } from '@/components/public/productos/ProductosCardList'
 import { IProducto } from '@/interfaces/IProductos'
+import { getProductos } from '@/model/productos/dataproductos'
 import React from 'react'
 
-// const Productospage = () => {
+const ProductosPage = async () => {
 
-//   async function getProductos() {
-//     const res = await fetch('http//192.168.1.224:3001/tienda/productos', {cache: 'no-store'})
-//     if (!res.ok) {
-//       throw new Error('Failed to fetch data')
-//     }
-//     return res.json
-//   }
-//   const productos: IProducto[] = await getProductos()
-
-//   return (
-//     <>
-//       <h1>Productos</h1>
-//       <ul>
-//         {
-//           productos.map((producto: IProducto) => (
-//             <li>
-//               { producto.nombre}
-//             </li>
-//           ))
-//         }
-//       </ul>
-//     </>
-//   )
-// }
-export default function ProductosPage(){
+  const productos: IProducto[] = await getProductos()
   return (
-    <h1>Productos</h1>
+    <>
+      <section className='flex flex-col items-center'>
+        <h2 className='text-4xl m-8'>Sección de Productos</h2>
+        <ProductosCardList productos={productos}/>
+      </section>
+        
+    </>
   )
 }
+
+
+
+export default ProductosPage;
 

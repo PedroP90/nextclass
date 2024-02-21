@@ -1,3 +1,6 @@
+import { ICategoria } from "./ICategorias";
+import { IProveedor } from "./iProveedores";
+
 export interface IProducto {
     id_producto: string;
     nombre:      string;
@@ -8,6 +11,11 @@ export interface IProducto {
     precio:      string;
     peso_kg:     string;
     color:       string;
-    categoria:   number;
-    proveedor:   number;
+    img:         string;
+    categoria?:   {
+        id_categoria: string;
+        nombre: string;
+        descripcion: string;
+    };
+    proveedor:   IProveedor;
 }

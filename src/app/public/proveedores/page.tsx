@@ -9,16 +9,15 @@ import React from 'react'
 
 const ProveedoresPage = async () => {
 
-  
-
   const proveedores: IProveedor[] = await getProveedores()
   return (
     <>
       <h1>Proveedores</h1>
-      <Tabla 
+      {/* <Tabla 
         rows={proveedores} 
         columns={ColumProveedor}
-        key='cif'/>
+        key='cif'/> */}
+        
     </>
   )
 }
