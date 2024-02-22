@@ -12,10 +12,11 @@ export interface IProducto {
     peso_kg:     string;
     color:       string;
     img:         string;
-    categoria?:   {
-        id_categoria: string;
-        nombre: string;
-        descripcion: string;
-    };
+    categoria?:  ICategoria;
+    // categoria?:   {
+    //     id_categoria: string;
+    //     nombre: string;
+    //     descripcion: string;
+    // };
     proveedor:   IProveedor;
 }

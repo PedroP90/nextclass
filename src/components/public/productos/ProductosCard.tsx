@@ -18,6 +18,7 @@ export const ProductosCard:FC<Props> = ({productos}) => {
                 className="object-cover rounded-xl max-h-44"
                 src={productos.img}
             />
+            <h5 className="font-bold text-sm">{ productos.categoria?.nombre }</h5>
         </CardBody>
         <CardFooter className="pb-0 pt-2 px-4 h-10 flex-col items-start">
             <p className="text-tiny uppercase font-bold">

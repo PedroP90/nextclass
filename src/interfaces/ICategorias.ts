@@ -7,23 +7,3 @@ export interface ICategoria {
     producto?:   string[];
 }
 
-export interface IColumn {
-    key: string;
-    label: string;
-}
-
-const ColumCategoria:IColumn[] = [
-    {
-        key: "id_categoria",
-        label: "ID_CATEGORIA",
-    },
-    {
-        key: "nombre",
-        label: "NOMBRE",
-    },{
-        key: "descripcion",
-        label: "DESCRIPCION",
-    }
-]
-
-export default ColumCategoria
