@@ -19,8 +19,8 @@ export default function PublicLayout({children}: IChildren){
 
     return (
         <>
-            <header>
-                <h1>Header del Frontend</h1>
+            <header className="pt-4">
+                {/* <h1>Header del Frontend</h1> */}
                 {/* <Menu/> */}
                 <Menu links= {links} />
             </header>

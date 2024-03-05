@@ -1,24 +1,23 @@
-import { IProducto } from "@/interfaces/IProductos";
+import { IProveedor } from "@/interfaces/iProveedores";
 
 
 const apiBD = 'http://192.168.1.224:3001/tienda';
-const apiProductos = {
+const apiProveedores = {
 
-    listar: async (): Promise<IProducto[]> => {
-        const ruta = `${apiBD}/productos`;
+    listar: async (): Promise<IProveedor[]> => {
+        const ruta = `${apiBD}/proveedor`;
         const productos = await fetch(`${ruta}`, { cache: 'no-store'})
         //este res.json transforma el string en formato json que llega desde internet a un array javascript en formato json
             .then((res) => res.json())
         return productos
     },
 
-    detalle: async (id: IProducto["id_producto"]): Promise<IProducto> => {
-        const ruta = `${apiBD}/productos/${id}`;
+    detalle: async (id: IProveedor["cif"]): Promise<IProveedor> => {
+        const ruta = `${apiBD}/proveedor/${id}`;
         const producto = await fetch(`${ruta}`, { cache: 'no-store'})
             .then((res) => res.json())
-        console.log(producto.nombre)
         return producto
     }
 }
 
-export default apiProductos
+export default apiProveedores

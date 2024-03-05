@@ -1,4 +1,4 @@
-"use client"
+//"use client"
 
 import React, { FC } from 'react'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
@@ -14,18 +14,18 @@ interface Props {
 export const Menu:FC<Props> = ({links}) => {
 
     return (
-        <Navbar style={{backgroundColor: 'gray'}}>
+        <Navbar>
       {/* En una función de flecha se usan llaves y return si hay instrucciones java en medio
       que se traduce por paréntesis */}
       <NavbarBrand>
         {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">ACME</p>
+        <p className="font-bold text-inherit">LOGO</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {
           links.map ( (link) => (//return
             <NavbarItem>
-              <Link color="foreground" href={ link.href }>
+              <Link color="foreground" key= {link.name} href={ link.href }>
                 { link.name }
               </Link>
             </NavbarItem>
@@ -34,7 +34,7 @@ export const Menu:FC<Props> = ({links}) => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="/auth/login">Login</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">

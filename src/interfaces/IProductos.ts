@@ -1,6 +1,7 @@
 import { ICategoria } from "./ICategorias";
 import { IProveedor } from "./iProveedores";
 
+
 export interface IProducto {
     id_producto: string;
     nombre:      string;
@@ -12,11 +13,35 @@ export interface IProducto {
     peso_kg:     string;
     color:       string;
     img:         string;
+    key?:        string;
     categoria?:  ICategoria;
-    // categoria?:   {
-    //     id_categoria: string;
-    //     nombre: string;
-    //     descripcion: string;
-    // };
-    proveedor:   IProveedor;
+    proveedor?:   IProveedor;
 }
+export interface IColumn {
+    key: string;
+    label: string;
+}
+const ColumProducto:IColumn[] = [
+    {
+      key: "id_product",
+      label: "ID_PRODUCT",
+    },
+    {
+      key: "nombre",
+      label: "NOMBRE",
+    },
+    {
+      key: "page",
+      label: "PAGE",
+    },
+    {
+      key: "precio",
+      label: "PRECIO",
+    },
+    {
+        key: "img",
+        label: "Imagen",
+    },
+  ];
+
+  export default ColumProducto;
