@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import Link from 'next/link';
 import { ILink } from '@/interfaces/iLinks';
+import Logo from './logo';
 
 interface Props {
   links: ILink[],
@@ -18,8 +19,9 @@ export const Menu:FC<Props> = ({links}) => {
       {/* En una función de flecha se usan llaves y return si hay instrucciones java en medio
       que se traduce por paréntesis */}
       <NavbarBrand>
-        {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">LOGO</p>
+      <p className="font-bold text-inherit rojo-horda">HORDE</p>
+        <Logo />
+        <p className="font-bold text-inherit rojo-horda">SOLUTIONS</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {

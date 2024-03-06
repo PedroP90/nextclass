@@ -15,9 +15,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "rojo-horda": "#76263D"
+      }
     },
   },
   darkMode: "class",
   plugins: [nextui()],
 };
 export default config;
+

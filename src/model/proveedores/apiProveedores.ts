@@ -1,7 +1,7 @@
 import { IProveedor } from "@/interfaces/iProveedores";
 
 
-const apiBD = 'http://192.168.1.224:3001/tienda';
+const apiBD = 'http://3.89.177.61:3001/tienda';
 const apiProveedores = {
 
     listar: async (): Promise<IProveedor[]> => {
