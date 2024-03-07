@@ -19,9 +19,9 @@ export const Menu:FC<Props> = ({links}) => {
       {/* En una función de flecha se usan llaves y return si hay instrucciones java en medio
       que se traduce por paréntesis */}
       <NavbarBrand>
-      <p className="font-bold text-inherit rojo-horda">HORDE</p>
+      <p className="font-bold text-inherit text-red-900">HORDE</p>
         <Logo />
-        <p className="font-bold text-inherit rojo-horda">SOLUTIONS</p>
+        <p className="font-bold text-inherit text-red-900">SOLUTIONS</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {
