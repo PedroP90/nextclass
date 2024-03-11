@@ -1,12 +1,19 @@
 import Logo from "@/components/commons/logo";
+import { ProductosCardList } from "@/components/public/productos/ProductosCardList";
+import apiProductos from "@/model/productos/apiProductos";
 import { Button } from "@nextui-org/button";
 
 
-export default function HomePage() {
+const PublicPage = async () => {
+  
+  const productos = await apiProductos.listar();
+  
   return (
-    <div>
-      <Button>Frontend</Button>
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, minima quidem temporibus eum aut incidunt at ullam nesciunt voluptate quis non libero voluptas esse reiciendis quod facere suscipit fuga dicta!</h3>
-    </div>
-  );
+        <section className='flex flex-col items-center'>
+          <h2 className='text-4xl m-8'>Sección de Productos</h2>
+          <ProductosCardList productos={productos}/>
+        </section>
+  )
 }
+
+export default PublicPage;

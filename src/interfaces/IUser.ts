@@ -1,12 +1,13 @@
 export interface IUser {
-    id:        string;
-    email:     string;
-    username:  string;
-    password:  string;
-    isActive:  boolean;
-    roles:     string[];
-    logo:      null;
-    instagram: null;
-    createdAt: Date;
-    updateAt:  Date;
+    id?:         number;
+    email:      string;
+    username:   string;
+    password:   string;
+    isActive?:   boolean;
+    token?:     string;
+    roles?:     string[];
+    logo?:      string;
+    instagram?: string;
+    createdAt?:  Date;
+    updateAt?:   Date;
 }

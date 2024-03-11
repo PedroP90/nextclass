@@ -8,20 +8,23 @@ interface Props {
 
 export const ProductoCard:FC<Props> = ({producto}) => {
   return (
-    <Card className="py-4 min-h-72 max-h-72">
+    <Card className="py-4 min-h-72 max-h-72 hover:bg-red-900 hover:text-white">
         <CardHeader className="pb-0 pt-2 px-4 h-10 flex-col items-start">
-            <h5 className="font-bold text-sm">{ producto.nombre }</h5>
+            <h5 className="font-bold text-sm hover:text-red-900">{producto.categoria?.nombre}</h5>
         </CardHeader>
-        <CardBody className="overflow-visible h-48 py-2 flex flex-wrap justify-center items-center">
+        <CardBody className="group overflow-visible h-48 py-2 flex flex-wrap justify-center items-center relative">
             <Image
                 alt="Card background"
-                className="object-cover rounded-xl max-h-44"
+                className="custom-drop-shadow object-cover rounded-xl max-h-44 ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
                 src={producto.img}
             />
         </CardBody>
-        <CardFooter className="pb-0 pt-2 px-4 h-10 flex-col items-start">
-            <p className="text-tiny uppercase font-bold">
-                {producto.categoria?.nombre}
+        <CardFooter className="pb-0 pt-2 px-4 h-10 flex justify-between">
+            <p className="text-tiny uppercase font-bold ">
+                { producto.nombre }
+            </p>
+            <p className="text-tiny uppercase font-bold ">
+                { producto.precio }€
             </p>
         </CardFooter>
     </Card>

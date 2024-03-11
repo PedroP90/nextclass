@@ -8,6 +8,6 @@ export interface ILogin {
 export interface IRespLogin {
     msg: string;
     status: number;
-    data: IUser;
+    user: IUser;
     token: string;
 }
