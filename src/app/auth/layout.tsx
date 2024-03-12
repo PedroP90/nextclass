@@ -4,9 +4,9 @@ export default function AuthLayout({children}: IChildren){
 
     return (
         <>
-            <header className='bg-orange-300'>
+            {/* <header className='bg-orange-300'>
                 <h2>Zona de autenticación</h2>
-            </header>
+            </header> */}
             <main className='container mx-auto'>
                 { children }
             </main>

@@ -17,8 +17,16 @@ const apiProductos = {
         const producto = await fetch(`${ruta}`, { cache: 'no-store'})
             .then((res) => res.json())
         console.log(producto.nombre)
-        return producto
-    }
+        return producto  
+    },
+
+    delete: async (id: IProducto["id_producto"]): Promise<IProducto> => {
+        const ruta = `${apiBD}/productos/${id}`;
+        const producto = await fetch(`${ruta}`, { cache: 'no-store'})
+            .then((res) => res.json())
+        console.log(producto.nombre)
+        return producto  
+    },
 }
 
 export default apiProductos

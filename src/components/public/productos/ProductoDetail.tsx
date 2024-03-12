@@ -11,8 +11,8 @@ export const ProductoDetail:FC<Props> = ({ producto }) => {
 
     
     return(
-        <Card className="flex flex-wrap">
-            <CardHeader className="h-full">
+        <Card className="py-4 flex flex-row flex-wrap hover:bg-red-900 hover:text-white">
+            <CardHeader className="justify-center pb-0 pt-2 px-4 mx-auto basis-1/3">
                 <Image 
                     alt="Card background"
                     className="object-cover rounded-xl"
@@ -20,12 +20,17 @@ export const ProductoDetail:FC<Props> = ({ producto }) => {
                     width={270} 
                     />
             </CardHeader>
-            <CardBody className="">
-                <h2>{ producto.nombre }</h2>
-                <h3> {producto.categoria?.nombre}</h3>
+            <CardBody className="overflow-visible py-2 basis-1/3 space-y-2">
+                <p><strong>Nombre:</strong> {producto.nombre}</p>
+                <p><strong>Marca:</strong> {producto.marca}</p>
+                <p><strong>Proveedor:</strong> {producto.proveedor?.nombre}</p>
+                <p><strong>Modelo:</strong> {producto.modelo}</p>
+                <p><strong>Color:</strong> {producto.color}</p>
+                <p><strong>Categoría:</strong> {producto.categoria?.nombre}</p>
+                <p><strong>Precio:</strong> {producto.precio}€</p>
             </CardBody>
-            <CardFooter className="">
-                <h3>{producto.precio}</h3>
+            <CardFooter>
+                <h3>{producto.descripcion}</h3>
             </CardFooter>
         </Card>
 
