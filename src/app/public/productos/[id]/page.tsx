@@ -10,7 +10,7 @@ const ProductoPage = async ({ params: { id } }: { params: { id: string } }) => {
 
   return (
     <section className="container mx-auto px-4 mt-6 flex justify-center">
-        <ProductoDetail producto={producto} />
+        <ProductoDetail key={producto.id_producto} producto={producto} />
     </section>
   )
 }

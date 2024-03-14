@@ -1,5 +1,6 @@
 import apiProductos from "@/model/productos/apiProductos";
 import { AdminTable } from "../components/AdminTable"
+import { Search } from "../components/Search";
 
 
 const ProductosAdminPage = async () => {
@@ -8,8 +9,10 @@ const ProductosAdminPage = async () => {
 
     return (
         <>
-            <h1>Sección de Productos</h1>
+            {/* <h1>Sección de Productos</h1> */}
             <AdminTable productos={productos}/>
+            <br/>
+            <Search placeholder="Búsqueda" />
         </>
     )
 }

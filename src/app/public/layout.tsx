@@ -2,6 +2,8 @@
 import { Menu } from "@/components/commons/Menu";
 import { IChildren } from "@/interfaces/iChildren";
 import { ILink } from "@/interfaces/iLinks";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 
 
@@ -24,9 +26,11 @@ export default function PublicLayout({children}: IChildren){
                 {/* <Menu/> */}
                 <Menu links= {links} />
             </header>
-            <main>
-                { children }
-            </main>
+            <Suspense fallback={<Loading/>}>
+                <main>
+                    { children }
+                </main>
+            </Suspense> 
         </>
     )
 }

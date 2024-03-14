@@ -8,3 +8,36 @@ export interface IProveedor {
     direccion:     string;
     producto?:   string[];
 }
+
+export interface IColumn {
+    key: string;
+    label: string;
+}
+const ColumProveedores:IColumn[] = [
+    {
+        key: "cif",
+        label: "CIF",
+    },
+    {
+        key: "nombre",
+        label: "NOMBRE",
+    },
+    {
+        key: "telefono",
+        label: "TELEFONO",
+    },
+    {
+        key: "mail",
+        label: "MAIL",
+    },
+    {
+        key: "codigo_postal",
+        label: "CODIGO_POSTAL",
+    },
+    {
+        key: "direccion",
+        label: "DIRECCION",
+    },
+  ];
+
+  export default ColumProveedores;
