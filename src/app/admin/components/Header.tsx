@@ -1,7 +1,6 @@
 'use client'
 
 import { Menu } from "@/components/commons/Menu"
-import Logo from "@/components/commons/logo"
 import { ILink } from "@/interfaces/iLinks";
 
 
@@ -18,7 +17,9 @@ export const Header = () => {
   return (
     <>
       
-        <Menu links= {links}/>
+          <header>
+            <Menu links= {links} />
+          </header>
 
 
 

@@ -1,17 +1,16 @@
-import { ICategoria } from "@/interfaces/ICategorias";
-import { getCategorias } from "@/model/categorias/datacategoria";
+import { CatTable } from "@/components/public/categorias/CatTable";
+import apiCategorias from "@/model/categorias/apiCategorias";
+
 
 const CategoriasPage = async () => {
 
-  
+  const categorias = await apiCategorias.listar();
+
   return (
     <>
-      <h1>Categorias</h1>
-      {/* <Tabla 
-        rows={proveedores} 
-        columns={ColumProveedor}
-        key='cif'/> */}
-        
+      <section className="p-6">
+        <CatTable categorias={categorias}/>
+      </section>
     </>
   )
 }

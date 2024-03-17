@@ -7,7 +7,6 @@ const apiProveedores = {
     listar: async (): Promise<IProveedor[]> => {
         const ruta = `${apiBD}/proveedor`;
         const productos = await fetch(`${ruta}`, { cache: 'no-store'})
-        //este res.json transforma el string en formato json que llega desde internet a un array javascript en formato json
             .then((res) => res.json())
         return productos
     },

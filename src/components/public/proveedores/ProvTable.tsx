@@ -1,4 +1,3 @@
-import { IProducto } from "@/interfaces/IProductos";
 import { IProveedor } from "@/interfaces/iProveedores";
 import { FC } from "react";
 
@@ -36,7 +35,7 @@ export const ProvTable:FC<Props> = ({proveedores}) => {
                             </thead>
                             {
                                 proveedores.map( (proveedor) => (    
-                                    <tbody>
+                                    <tbody key={proveedor.cif}>
                                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <td className="p-4">
                                                 {proveedor.cif}

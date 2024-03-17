@@ -1,8 +1,8 @@
 
 
 import React from 'react'
-import { ProvTable } from './componentes/ProvTable'
 import apiProveedores from '@/model/proveedores/apiProveedores'
+import { ProvTable } from '@/components/public/proveedores/ProvTable';
 
 
 const ProveedoresPage = async () => {
@@ -11,9 +11,9 @@ const ProveedoresPage = async () => {
   
   return (
     <>
-      <h1>Proveedores</h1>
-      <ProvTable proveedores={proveedores}/>
-        
+      <section className="pt-4">
+        <ProvTable proveedores={proveedores}/>
+      </section> 
     </>
   )
 }

@@ -11,9 +11,7 @@ const ProductosPage = async () => {
 return (
       <section className='flex flex-col items-center'>
         <h2 className='text-4xl m-8'>Sección de Productos</h2>
-        <Suspense fallback={<div>Cargando ...</div>}>
-          <ProductosCardList productos={productos}/>
-        </Suspense>
+        <ProductosCardList productos={productos}/>
       </section>
 )
 }

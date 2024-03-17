@@ -17,6 +17,14 @@ export interface IProducto {
     categoria?:  ICategoria;
     proveedor?:   IProveedor;
 }
+
+export interface IRespProd {
+  msg: string;
+  status: number;
+  data: IProducto;
+  token: string;
+}
+
 export interface IColumn {
     key: string;
     label: string;

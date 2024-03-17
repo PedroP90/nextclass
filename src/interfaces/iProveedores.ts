@@ -1,3 +1,5 @@
+import { IProducto } from "./IProductos";
+
 export interface IProveedor {
     nombre:        string;
     cif:           string;
@@ -6,7 +8,7 @@ export interface IProveedor {
     pais:          string;
     codigo_postal: string;
     direccion:     string;
-    producto?:   string[];
+    producto?:   IProducto[];
 }
 
 export interface IColumn {

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ILink } from '@/interfaces/iLinks';
 import Logo from './logo';
 import Cookies from 'js-cookie';
+import { link } from 'fs';
 
 interface Props {
   links: ILink[],
@@ -26,7 +27,7 @@ export const Menu:FC<Props> = ({links}) => {
           {
             links.map ( (link) => (//return
               <NavbarItem>
-                <Link color="foreground" key= {link.name} href={ link.href } className="font-bold hover:text-red-900 transition-colors ease-in-out hover:duration-300">
+                <Link key= {link.name} href={ link.href } className="font-bold hover:text-black text-red-900 transition-colors ease-in-out hover:duration-300">
                   { link.name }
                 </Link>
               </NavbarItem>
@@ -37,10 +38,10 @@ export const Menu:FC<Props> = ({links}) => {
             ?
             <NavbarContent justify="end">
               <NavbarItem className="hidden lg:flex">
-                <Link href="/auth/login" className="hover:text-blue-500">Login</Link>
+                <Link href="/auth/login" className="hover:text-red-900">Login</Link>
               </NavbarItem>
               <NavbarItem>
-                <Button as={Link} color="primary" href="#" variant="flat">
+                <Button as={Link} className='text-white bg-red-900' href="#" variant="flat">
                   Sign Up
                 </Button>
               </NavbarItem>
@@ -57,8 +58,7 @@ export const Menu:FC<Props> = ({links}) => {
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
                 />
                 <h2>{Cookies.get('email')}</h2>
-              </>
-              
+              </> 
         }
     </Navbar>
     )

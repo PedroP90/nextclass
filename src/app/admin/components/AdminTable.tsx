@@ -1,8 +1,9 @@
 'use client'
 import { IProducto } from "@/interfaces/IProductos";
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import ProductModal from "./ProductModal";
 import axios from "axios";
+import { useSearchParams } from 'next/navigation';
 
 
 interface Props {
@@ -12,13 +13,13 @@ interface Props {
 export const AdminTable:FC<Props> = ({productos}) => {
 
     const [deletedProduct, setDeletedProduct] = useState<string | null>(null);
-    const [showForm, setShowForm] = useState(false); // Estado para controlar la visibilidad del formulario
+
 
     // Función para manejar el evento de clic en el botón "Borrar"
     const handleDelete = async (id_producto: string) => {
         try {
         // Realiza una solicitud DELETE a tu API Nest para eliminar la moto
-        await axios.delete(`http://3.89.177.61:3001/tienda/motos/${id_producto}`);
+        await axios.delete(`http://3.89.177.61:3001/tienda/productos/${id_producto}`);
         // Actualiza el estado si la solicitud es exitosa
         setDeletedProduct(id_producto);
         // Recarga la página automáticamente después de eliminar
@@ -35,7 +36,11 @@ export const AdminTable:FC<Props> = ({productos}) => {
         }
     };
 
-   
+
+
+
+
+
     return (
         <>
         
@@ -69,7 +74,7 @@ export const AdminTable:FC<Props> = ({productos}) => {
                             </thead>
                             {
                                 productos.map( (producto) => (    
-                                    <tbody>
+                                    <tbody key={producto.id_producto}>
                                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <td className="p-4">
                                                 <img src={producto.img} className="w-16 md:w-32 max-w-full max-h-full" alt={producto.nombre}/>
@@ -84,7 +89,7 @@ export const AdminTable:FC<Props> = ({productos}) => {
                                                 {producto.precio}€
                                             </td>
                                             <td className="px-6 py-4">
-                                                <button type="button" onClick={() => confirmDelete(producto.id_producto)} className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                                <button type="button" onClick={() => confirmDelete(producto.id_producto)} className="text-white bg-gradient-to-r from-red-500 via-red-700 to-red-900 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                                                     Borrar
                                                 </button>
                                             </td>

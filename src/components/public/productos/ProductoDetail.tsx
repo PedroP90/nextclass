@@ -9,7 +9,6 @@ interface Props {
 
 export const ProductoDetail:FC<Props> = ({ producto }) => {
 
-    
     return(
         <Card className="py-4 flex flex-row flex-wrap hover:bg-red-900 hover:text-white">
             <CardHeader className="justify-center pb-0 pt-2 px-4 mx-auto basis-1/3">
