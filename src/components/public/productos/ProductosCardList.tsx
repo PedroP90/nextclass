@@ -2,7 +2,7 @@ import { IProducto } from '@/interfaces/IProductos';
 import React, { FC } from 'react'
 
 import Link from 'next/link';
-import { ProductoCard } from '../categorias/ProductosCard';
+import { ProductoCard } from './ProductosCard';
 
 interface Props {
     productos: IProducto[];

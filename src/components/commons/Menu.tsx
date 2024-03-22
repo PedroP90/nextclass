@@ -55,7 +55,7 @@ export const Menu:FC<Props> = ({links}) => {
                   color="secondary"
                   name="Jason Hughes"
                   size="sm"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                  src="https://media.hearthpwn.com/attachments/thumbnails/0/51/240/240/thrall.png"
                 />
                 <h2>{Cookies.get('email')}</h2>
               </> 

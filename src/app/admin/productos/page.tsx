@@ -13,7 +13,7 @@ const ProductosAdminPage = async () => {
             {/* <h1>Sección de Productos</h1> */}
             <Search placeholder="Búsqueda" />
             <br/>
-            <AdminTable  productos={productos}/>
+            <AdminTable productos={productos}/>
             <footer>
                 <FooterP/>
             </footer>
